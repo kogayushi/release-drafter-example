@@ -16,16 +16,16 @@ categories:
 autolabeler:
   - label: 'feature'
     branch:
-      - '/feature.+/'
+      - '/^feature.+/'
   - label: 'fix'
     branch:
-      - '/fix\/.+/'
+      - '/^fix\/.+/'
   - label: 'hotfix'
     branch:
-      - '/hotfix\/.+/'
+      - '/^hotfix\/.+/'
   - label: 'chore'
     branch:
-      - '/chore\/.+/'
+      - '/^chore\/.+/'
 change-template: '- #$NUMBER $TITLE (@$AUTHOR)'
 template: |
   ## Changes
