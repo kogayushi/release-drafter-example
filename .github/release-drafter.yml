@@ -1,23 +1,32 @@
 name-template: 'v$NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
+exclude-labels:
+  - 'promotion'
 categories:
-  - title: 'Breaking change'
-    labels:
-      - 'Breaking Change'
-  - title: 'Features'
+  - title: ':rocket: 機能追加'
     labels:
       - 'feature'
-      - 'enhancement'
-  - title: 'Fixes'
+  - title: ':bug: バグ修正'
     labels:
-      - 'bug'
-  - title: 'Dependencies'
+      - 'fix'
+      - 'hotfix'
+  - title: ':beer: メンテナンス'
     labels:
-      - 'dependencies'
-  - title: 'Refactor'
-    labels:
-      - 'refactor'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+      - 'chore'
+autolabeler:
+  - label: 'feature'
+    branch:
+      - '/feature.+/'
+  - label: 'fix'
+    branch:
+      - '/fix\/.+/'
+  - label: 'hotfix'
+    branch:
+      - '/hotfix\/.+/'
+  - label: 'chore'
+    branch:
+      - '/.+/'
+change-template: '- #$NUMBER $TITLE (@$AUTHOR)'
 template: |
   ## Changes
   $CHANGES
