@@ -23,7 +23,7 @@ autolabeler:
   - label: 'promotion'
     branch:
 #      - '/^staging$/'
-      - '/develop/'
+      - '/develop.*/'
 category-template: '### $TITLE'
 change-template: '- #$NUMBER $TITLE by @$AUTHOR : $URL'
 template: |
