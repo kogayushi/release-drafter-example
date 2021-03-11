@@ -22,8 +22,8 @@ autolabeler:
       - '/^hotfix\/.+/'
   - label: 'promotion'
     branch:
-      - '/^develop$/'
-      - '/^staging$/'
+      - '/^develop/'
+      - '/^staging/'
 category-template: '### $TITLE'
 change-template: '- #$NUMBER $TITLE by @$AUTHOR : $URL'
 template: |
