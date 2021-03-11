@@ -10,9 +10,6 @@ categories:
     labels:
       - 'fix'
       - 'hotfix'
-  - title: ':beer: メンテナンス'
-    labels:
-      - 'chore'
 autolabeler:
   - label: 'feature'
     branch:
@@ -23,11 +20,13 @@ autolabeler:
   - label: 'hotfix'
     branch:
       - '/^hotfix\/.+/'
-  - label: 'chore'
-    branch:
-      - '/.*/'
+category-template: '### $TITLE'
 change-template: '- #$NUMBER $TITLE (@$AUTHOR)'
 template: |
-  ## Changes
+  ## 変更点一覧 
+  ### :beer: メンテナンス
   $CHANGES
+  
+  ### Authors
+  $CONTRIBUTORS
 
