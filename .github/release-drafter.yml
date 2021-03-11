@@ -20,13 +20,15 @@ autolabeler:
   - label: 'hotfix'
     branch:
       - '/^hotfix\/.+/'
+  - label: 'promotion'
+    branch:
+      - '/^staging.*/'
 category-template: '### $TITLE'
-change-template: '- #$NUMBER $TITLE (@$AUTHOR)'
+change-template: '- #$NUMBER $TITLE by @$AUTHOR : $URL'
 template: |
   ## 変更点一覧 
-  ### :beer: メンテナンス
   $CHANGES
   
-  ### Authors
+  ## Contributors
   $CONTRIBUTORS
 
