@@ -3,10 +3,16 @@ tag-template: 'v$NEXT_PATCH_VERSION'
 exclude-labels:
   - 'promotion'
 categories:
-  - title: ':rocket: 機能追加'
+  - title: '⭐️ 新機能'
     labels:
       - 'feature'
-  - title: ':bug: バグ修正'
+  - title: '🔥 改善'
+    labels:
+      - 'kaizen'
+  - title: '🦊 お客様に関係しない変更'
+    labels:
+      - 'chore'
+  - title: '🪲 不具合修正'
     labels:
       - 'fix'
       - 'hotfix'
@@ -14,6 +20,12 @@ autolabeler:
   - label: 'feature'
     branch:
       - '/^feature.+/'
+  - label: 'kaizen'
+    branch:
+      - '/^kaizen.+/'
+  - label: 'chore'
+    branch:
+      - '/^chore.+/'
   - label: 'fix'
     branch:
       - '/^fix\/.+/'
@@ -28,7 +40,3 @@ change-template: '- #$NUMBER $TITLE by @$AUTHOR : $URL'
 template: |
   ## 変更点一覧 
   $CHANGES
-  
-  ## Contributors
-  $CONTRIBUTORS
-
