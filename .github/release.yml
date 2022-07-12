@@ -1,0 +1,21 @@
+changelog:
+  exclude:
+    labels:
+      - promotion
+  categories:
+    - title: '⭐️ 新機能'
+      labels:
+        - 'feature'
+    - title: '🔥 改善'
+      labels:
+        - 'kaizen'
+    - title: '🦊 お客様に関係しない変更'
+      labels:
+        - 'chore'
+    - title: '🪲 不具合修正'
+      labels:
+        - 'fix'
+        - 'hotfix'
+    - title: その他の修正
+      labels:
+        - "*"
