@@ -18,7 +18,7 @@ categories:
       - 'hotfix'
   - title: その他の修正
     labels:
-      - "*"
+      - "others"
 autolabeler:
   - label: 'feature'
     branch:
