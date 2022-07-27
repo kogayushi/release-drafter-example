@@ -1,5 +1,6 @@
-name-template: 'release/YYYYMMDD'
+name-template: ''
 tag-template: ''
+version-template: "release/YYYYMMDD"
 exclude-labels:
   - 'promotion'
 categories:
