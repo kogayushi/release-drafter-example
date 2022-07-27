@@ -1,5 +1,6 @@
-name-template: 'v$NEXT_PATCH_VERSION'
-tag-template: 'v$NEXT_PATCH_VERSION'
+name-template: 'release/YYYYMMDD_$NEXT_PATCH_VERSION'
+tag-template: 'release/YYYYMMDD_$NEXT_PATCH_VERSION'
+version-template: ""
 exclude-labels:
   - 'promotion'
 categories:
@@ -38,6 +39,9 @@ autolabeler:
   - label: 'promotion'
     branch:
       - '/^(develop|staging)$/i'
+  - label: 'others'
+    branch:
+      - '/.*/i'
 category-template: '### $TITLE'
 change-template: '- #$NUMBER $TITLE by @$AUTHOR : $URL'
 template: |
