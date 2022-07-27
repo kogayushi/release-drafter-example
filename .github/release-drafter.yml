@@ -1,5 +1,5 @@
-name-template: 'release/YYYYMMDD_$NEXT_PATCH_VERSION'
-tag-template: 'release/YYYYMMDD_$NEXT_PATCH_VERSION'
+name-template: ''
+tag-template: ''
 version-template: "release/YYYYMMDD"
 exclude-labels:
   - 'promotion'
