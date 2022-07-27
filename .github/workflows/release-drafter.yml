@@ -1,16 +1,15 @@
 name: Release Drafter
 
+# on pushの指定はなくてもいい
+
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches: [main]
+    types: [opened, reopened, synchronize, closed] # closedを加えておかないとマージ時にrelease noteが更新されない
 
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - uses: release-drafter/release-drafter@v5.18.1 #これより最近のバージョンでも正常に動作するが、よくわからないエラーが出てしまうので一応固定しておいたほうが良い
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
